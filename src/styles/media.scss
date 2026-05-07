@@ -1,0 +1,20 @@
+
+
+@media screen and (max-width: 300px){
+    .box{
+        width: 250px;
+    }
+}
+/*pequenas*/
+@media screen and (max-width: 768px){
+    .box{
+        max-width: 300px;
+    }
+}
+
+/*tablet*/
+@media screen and ((min-width: 769px) and (max-width: 992px)){
+    .box{
+        width: 600px;
+    }
+}
