@@ -54,7 +54,7 @@ export const Home = () => {
             <h1>To do-List</h1>
             <AddTarefa onTarefaAdicionada={carregarTarefas}/>
             <div>{Isloading ? <p>Carregando...</p> : null}</div>
-           {/* <div>{error ? <p>Não foi possível se conectar ao servidor</p> : null}</div> */}
+            <div>{error ? <p>Não foi possível se conectar ao servidor</p> : null}</div> 
 
             <div className="box-itens">
                {tarefas.map((tarefa => (
