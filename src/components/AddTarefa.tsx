@@ -22,7 +22,7 @@ export const AddTarefa = ({onTarefaAdicionada}:any) => {
     return(
         <form onSubmit={handleSubmit} className="field_form">
             <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Nova Tarefa" required/>
-            <button type="submit" className="btn_add"><IoMdAdd size={50}/></button>
+            <button type="submit" className="btn"><IoMdAdd size={50} className="btn_Add"/></button>
         </form>
     )
 }

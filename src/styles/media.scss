@@ -1,13 +1,14 @@
-
+$formRes : rgba(172, 10, 10, 0.678);
 
 @media screen and (max-width: 300px){
     .box{
-        width: 250px;
+        width: 247px;
     }
 }
 /*pequenas*/
 @media screen and (max-width: 768px){
     .box{
+        background-color: $formRes;
         max-width: 300px;
     }
 }

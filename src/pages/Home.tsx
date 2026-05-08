@@ -54,17 +54,16 @@ export const Home = () => {
             <h1>To do-List</h1>
             <AddTarefa onTarefaAdicionada={carregarTarefas}/>
             <div>{Isloading ? <p>Carregando...</p> : null}</div>
-            <div>{error ? <p>Não foi possível se conectar ao servidor</p> : null}</div>
+           {/* <div>{error ? <p>Não foi possível se conectar ao servidor</p> : null}</div> */}
 
             <div className="box-itens">
                {tarefas.map((tarefa => (
                 <div key={tarefa.id} className="tarefa">
                     <div className="checkbox">
                       <input type="checkbox" checked={tarefa.completed} onChange={() => handleToggle(tarefa)}/>  
-                    </div>
-                
-                    <p>{tarefa.title}</p>
-                    <button onClick={() => handleDelete(tarefa.id)} className="btn_add"><ImBin size={30}/></button>
+                    </div>      
+                    <p className="title-task">{tarefa.title}</p>
+                    <button onClick={() => handleDelete(tarefa.id)} className="btn"><ImBin size={30} className="btn_Del"/></button>
                 </div>
             )))}  
             </div>
