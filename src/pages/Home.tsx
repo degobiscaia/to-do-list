@@ -5,6 +5,7 @@ import { AddTarefa } from "../components/AddTarefa";
 import "../styles/style.scss";
 import "../styles/media.scss";
 import { ImBin } from "react-icons/im";
+import { Atom } from "react-loading-indicators";
 
 
 export const Home = () => {
@@ -53,7 +54,7 @@ export const Home = () => {
         <div className="box">
             <h1>To do-List</h1>
             <AddTarefa onTarefaAdicionada={carregarTarefas}/>
-            <div>{Isloading ? <p>Carregando...</p> : null}</div>
+            <div>{Isloading ? <div className="load"><Atom color="#fff" size="medium" text="" textColor=""/><p>Carregando...</p></div> : null}</div>
             <div>{error ? <p>Não foi possível se conectar ao servidor</p> : null}</div> 
 
             <div className="box-itens">

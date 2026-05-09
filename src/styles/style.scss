@@ -65,6 +65,13 @@ input::placeholder{
     border: none;
 }
 
+.load{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .box-itens{
     display: flex;
     flex-direction: column;
