@@ -1,5 +1,4 @@
-$formRes : rgba(172, 10, 10, 0.678);
-
+/*Celulares*/
 @media screen and (max-width: 300px){
     .box{
         width: 247px;
@@ -8,7 +7,6 @@ $formRes : rgba(172, 10, 10, 0.678);
 /*pequenas*/
 @media screen and (max-width: 768px){
     .box{
-        background-color: $formRes;
         max-width: 300px;
     }
 }

@@ -2,6 +2,7 @@
 
 $carro : #00000094;
 $formulario : rgba(172, 10, 10, 0.418);
+$formRes : rgba(172, 10, 10, 0.678);
 $field: rgba(61, 59, 59, 0.521);
 $font: #fff;
 $font2: black;
@@ -22,7 +23,7 @@ body{
 }
 
 .box{
-    background-color: $formulario;
+    background-color: $formRes;
     display: flex;
     flex-direction: column;
     width: 600px;
@@ -70,6 +71,10 @@ input::placeholder{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#loading{
+    color: $font;
 }
 
 .box-itens{

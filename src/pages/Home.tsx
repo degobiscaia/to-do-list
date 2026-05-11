@@ -11,8 +11,6 @@ import { Atom } from "react-loading-indicators";
 export const Home = () => {
     const [tarefas, setTarefas] = useState<Tarefa[]>([]);
     const [Isloading, setIsloading] = useState(false);
-    const [error, setError] = useState(false);
-   // const [register,setRegister] = useState(false);
 
     useEffect(() => {
         carregarTarefas();
@@ -20,24 +18,14 @@ export const Home = () => {
 
     const carregarTarefas = async () => {
         setIsloading(true);
-        setError(true);
-
         try {
             const data = await buscarTarefa();
             setTarefas(data);
         } catch (error) {
-            alert('Erro ao carregar tarefas');
-            setError(true);
+            alert('Erro ao carregar o servidor');
         } finally {
             setIsloading(false);
-            setError(false);
         }
-
-        /*
-        if(tarefas.length === 0) {
-            setRegister(true);
-        }
-        */
     };
 
     const handleDelete = async (id:number) => {
@@ -54,8 +42,7 @@ export const Home = () => {
         <div className="box">
             <h1>To do-List</h1>
             <AddTarefa onTarefaAdicionada={carregarTarefas}/>
-            <div>{Isloading ? <div className="load"><Atom color="#fff" size="medium" text="" textColor=""/><p>Carregando...</p></div> : null}</div>
-            <div>{error ? <p>Não foi possível se conectar ao servidor</p> : null}</div> 
+            <div>{Isloading ? <div className="load"><Atom color="#fff" size="medium" text="" textColor=""/><p id="loading">Carregando...</p></div> : null}</div>
 
             <div className="box-itens">
                {tarefas.map((tarefa => (
