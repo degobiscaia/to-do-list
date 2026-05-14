@@ -1,0 +1,109 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+body{
+    background: url('../images/background-red-future.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flex-center;
+    height: 100vh;
+    width: 100vw;
+    font-family: $font-main;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+}
+
+.box{
+    background-color: $form;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    min-height: 600px;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px #00000081;
+}
+
+.box > h1{
+    text-align: center;
+    color: $font1;
+}
+
+.field_form{
+    @include flex-center-row;
+    width: 100%;
+}
+
+input{
+    background-color: $field;
+    width: 700px;
+    padding: $spacing-md;
+    border-radius: $spacing-md;
+    color: $font1;
+    font-size: $spacing-md;
+    font-weight: 600;
+    border: 1px solid $border-form;
+}
+
+input::placeholder{
+    color: $font1;
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+}
+
+.load, .box-itens{
+    @include flex-center-column;
+}
+
+#loading{
+    color: $font1;
+}
+
+
+.tarefa{
+    @include flex-center-row;
+    width: 100%;
+    justify-content: space-between;
+    color: $font1;
+    border: 1.5px solid $border-form;
+    box-shadow: 0px 0px 5px #000000cb;
+    margin: 10px;
+    font-weight: 400;
+}
+
+.title-task{
+    font-weight: 600;
+}
+
+.checkbox {
+    @include flex-center;
+}
+.checkbox > input{
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.btn_Add:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    color: $font1;
+}
+
+.btn_Del{
+    color: $font1;
+}
+
+.btn_Del:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    color: $font2;
+}
+
+

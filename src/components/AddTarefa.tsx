@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { criarTarefa } from "../services/Service";
-import "../styles/style.scss";
+import "../styles/main.scss";
 import { IoMdAdd } from "react-icons/io";
 
 
