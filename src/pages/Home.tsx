@@ -3,7 +3,6 @@ import type { Tarefa } from "../types/Tarefa";
 import { buscarTarefa, deletarTarefa, atualizarTarefa } from "../services/Service";
 import { AddTarefa } from "../components/AddTarefa";
 import "../styles/main.scss";
-import "../styles/media.scss";
 import { ImBin } from "react-icons/im";
 import { Atom } from "react-loading-indicators";
 
