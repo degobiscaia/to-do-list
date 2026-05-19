@@ -1,5 +1,5 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@use './abstracts/_variables' as *;
+@use './abstracts/_mixins' as *;
 
 body{
     background: url('../images/background-red-future.jpg');
@@ -7,8 +7,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     @include flex-center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
     font-family: $font-main;
     font-weight: 500;
     font-style: normal;
